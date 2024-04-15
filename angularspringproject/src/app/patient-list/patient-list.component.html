@@ -1,0 +1,23 @@
+<h2> Patient List</h2>
+<div class="card my-5">
+    <div class="card-body">
+      <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let patient of patients">
+            <td>{{ patient.id }}</td>
+            <td>{{ patient.firstName }}</td>
+            <td>{{ patient.lastName }}</td>
+            <td><a href="mailto:{{ patient.emailId }}">{{ patient.emailId }}</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
